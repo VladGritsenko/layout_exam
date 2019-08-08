@@ -20,7 +20,12 @@ body {
 
 .details {
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.photo {
+	position: relative;
 }
 
 .photo > img {
@@ -49,6 +54,7 @@ body {
 
 .extra {
 	display: none;
+	margin-top: 11px;
 }
 
 .name {
@@ -67,29 +73,22 @@ body {
 	align-items: center;
 	height: 287px;
 	width: 220px;
-	background-color: #fff;
+	background-color: #eee;
 	border-radius: 12px;
 	z-index: 1;
 
 	animation-name: block;
-	animation-duration: 2s;
-}
-
-.wrapper:hover .rank {
-	right: 25px;
+	animation-duration: 2.2s;
 }
 
 .wrapper:hover .extra {
-	position: absolute;
 	display: block;
-	z-index: 2;
-	bottom: 20px;
 }
 
 .wrapper:hover img {
 	animation-name: img;
 	animation-delay: 1s;
-	animation-duration: 1s;
+	animation-duration: 1.5s;
 }
 
 
@@ -108,10 +107,16 @@ body {
 		border-radius: 200px;
 	}
 
-	100% {
+	50% {
 		height: 240px;
 		width: 240px;
 		border-radius: 60px;
+	}
+
+	100% {
+		height: 200px;
+		width: 200px;
+		border-radius: 200px;
 	}
 }
 
@@ -119,22 +124,20 @@ body {
 	0% {
 		height: 231px;
 		width: 220px;
-		left: 0;
-		background-color: #eee;
 	}
 
 	50% {
 		height: 287px;
 		width: 240px;
-		left: -16px;
-		background-color: #eee;
+	}
+
+	75% {
+		height: 345px;
+		width: 264px;
 	}
 
 	100% {
-		height: 345px;
-		width: 264px;
-		left: -32px;
-		background-color: #eee;
+		height: 287px;
+		width: 240px;
 	}
-
 }
